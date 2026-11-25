@@ -5,9 +5,9 @@ export const DOWNLOAD_LINKS = {
   windows: 'https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/',
 } as const;
 
-export const HERO_IMAGE_PATH = '/src/assets/images/hero_xray_simulator_1795642841928.jpg';
-export const CONSOLE_IMAGE_PATH = '/src/assets/images/simulator_clinical_console_1795642842154.jpg';
-export const ACADEMY_MARK_PATH = '/src/assets/images/oneray_academy_mark_1795642842061.jpg';
+export const HERO_IMAGE_PATH = './src/assets/images/hero_xray_simulator_1795642841928.jpg';
+export const CONSOLE_IMAGE_PATH = './src/assets/images/simulator_clinical_console_1795642842154.jpg';
+export const ACADEMY_MARK_PATH = './src/assets/images/oneray_academy_mark_1795642842061.jpg';
 
 export interface IosInstructionStep {
   number: string;
@@ -22,21 +22,21 @@ export const IOS_SAFARI_INSTRUCTIONS: IosInstructionStep[] = [
     number: '01',
     text: 'بعد فتح الرابط اضغط على ثلاث نقاط في أسفل متصفح سفاري.',
     hint: 'في شريط أدوات متصفح Safari السفلي',
-    imageSrc: '/assets/aistudio/image_fabb7c11.png',
+    imageSrc: './assets/aistudio/image_fabb7c11.png',
     imageAlt: 'توضيح الضغط على الثلاث نقاط في أسفل متصفح سفاري',
   },
   {
     number: '02',
     text: 'اضغط على share أو مشاركة.',
     hint: 'أيقونة المربع مع السهم المتجه للأعلى',
-    imageSrc: '/assets/aistudio/image_190e9094.png',
+    imageSrc: './assets/aistudio/image_190e9094.png',
     imageAlt: 'توضيح الضغط على خيار Share أو مشاركة في القائمة',
   },
   {
     number: '03',
     text: 'ابحث عن خيار الإضافة إلى الواجهة الرئيسية أو Add to Home Screen.',
     hint: 'لتشغيل المحاكي كتطبيق مستقل على الشاشة الرئيسية',
-    imageSrc: '/assets/aistudio/image_0c86d632.png',
+    imageSrc: './assets/aistudio/image_0c86d632.png',
     imageAlt: 'توضيح اختيار زر Add to Home Screen لإضافة التطبيق للشاشة الرئيسية',
   },
 ];
