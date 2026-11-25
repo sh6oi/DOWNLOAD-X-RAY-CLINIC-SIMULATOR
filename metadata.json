@@ -1,0 +1,6 @@
+{
+  "name": "محاكي تقني الأشعة — أكاديمية ONERAY التعليمية",
+  "description": "واجهة تحميل لعبة محاكي تقني الأشعة (X-Ray Clinic Simulator) لأجهزة الأندرويد والآيفون والويندوز — أكاديمية ONERAY التعليمية، تصميم التدريسي مجتبى كريم.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
