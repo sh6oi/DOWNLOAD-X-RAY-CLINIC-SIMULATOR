@@ -21,10 +21,814 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- STANDALONE_STYLE_START -->
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      html {
+        font-family: "IBM Plex Sans Arabic", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background-color: #090e17;
+        color: #f1f5f9;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font-family: inherit;
+        cursor: pointer;
+      }
+      .sr-shell {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #090e17;
+        color: #f1f5f9;
+      }
+      .sr-container {
+        width: 100%;
+        max-width: 72rem;
+        margin-inline: auto;
+        padding-inline: 1rem;
+      }
+      @media (min-width: 640px) {
+        .sr-container { padding-inline: 1.5rem; }
+      }
+      @media (min-width: 1024px) {
+        .sr-container { padding-inline: 2rem; }
+      }
+      .sr-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        height: 4rem;
+        border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+        background-color: rgba(9, 14, 23, 0.92);
+        backdrop-filter: blur(12px);
+      }
+      .sr-header-inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      .sr-brand {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #ffffff;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .sr-nav {
+        display: none;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #cbd5e1;
+      }
+      .sr-nav a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      @media (min-width: 768px) {
+        .sr-nav { display: flex; }
+        .sr-brand { font-size: 1.125rem; }
+      }
+      .sr-header-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: #0ea5e9;
+        color: #020617;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 150ms ease;
+      }
+      .sr-header-cta:hover {
+        background-color: #38bdf8;
+      }
+      .sr-hero {
+        border-bottom: 1px solid rgba(30, 41, 59, 0.7);
+        background: linear-gradient(to bottom, #0c1322, #090e17);
+        padding-block: 2.5rem;
+      }
+      @media (min-width: 640px) {
+        .sr-hero { padding-block: 3.5rem; }
+      }
+      @media (min-width: 1024px) {
+        .sr-hero { padding-block: 5rem; }
+      }
+      .sr-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: stretch;
+      }
+      @media (min-width: 1024px) {
+        .sr-grid-2 {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+          gap: 3rem;
+        }
+        .sr-col-6 {
+          grid-column: span 6 / span 6;
+        }
+      }
+      .sr-kicker {
+        font-size: 0.8125rem;
+        font-weight: 500;
+        color: #38bdf8;
+        margin: 0 0 0.75rem;
+      }
+      .sr-h1 {
+        font-size: clamp(2.1rem, 4vw, 3.35rem);
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.2;
+        margin: 0 0 1rem;
+        text-wrap: balance;
+      }
+      .sr-en-sub {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #94a3b8;
+        margin: 0 0 1rem;
+        direction: ltr;
+        text-align: right;
+      }
+      .sr-lead {
+        font-size: 1rem;
+        color: #cbd5e1;
+        line-height: 1.7;
+        margin: 0 0 2rem;
+        max-width: 36rem;
+      }
+      @media (min-width: 640px) {
+        .sr-lead { font-size: 1.125rem; }
+      }
+      .sr-downloads {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .sr-btn-primary,
+      .sr-btn-secondary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 100%;
+        min-height: 64px;
+        padding: 0.875rem 1.25rem;
+        border-radius: 0.75rem;
+        text-align: right;
+        transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+      }
+      .sr-btn-primary {
+        background-color: #0ea5e9;
+        color: #020617;
+        border: 1px solid #0ea5e9;
+      }
+      .sr-btn-primary:hover {
+        background-color: #38bdf8;
+      }
+      .sr-btn-secondary {
+        background-color: #111827;
+        color: #f1f5f9;
+        border: 1px solid rgba(51, 65, 85, 0.85);
+      }
+      .sr-btn-secondary:hover {
+        background-color: #172136;
+        border-color: rgba(14, 165, 233, 0.5);
+      }
+      .sr-btn-left {
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+        min-width: 0;
+      }
+      .sr-icon-box-primary {
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 0.5rem;
+        background-color: rgba(2, 6, 23, 0.14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .sr-icon-box-secondary {
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 0.5rem;
+        background-color: rgba(30, 41, 59, 0.8);
+        border: 1px solid #334155;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #38bdf8;
+      }
+      .sr-btn-title {
+        display: block;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .sr-btn-sub {
+        display: block;
+        font-size: 0.75rem;
+        margin-top: 0.15rem;
+        opacity: 0.82;
+      }
+      .sr-meta-line {
+        margin-top: 1.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        color: #94a3b8;
+      }
+      .sr-hero-card {
+        position: relative;
+        min-height: 280px;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+        border: 1px solid #1e293b;
+        background-color: #111827;
+      }
+      @media (min-width: 1024px) {
+        .sr-hero-card { min-height: 460px; }
+      }
+      .sr-hero-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .sr-hero-scrim {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(9, 14, 23, 0.92), rgba(9, 14, 23, 0.25), transparent);
+      }
+      .sr-hero-caption {
+        position: absolute;
+        inset-inline: 0;
+        bottom: 0;
+        padding: 1.25rem 1.5rem;
+      }
+      .sr-section {
+        border-bottom: 1px solid rgba(30, 41, 59, 0.7);
+        padding-block: 3.5rem;
+      }
+      @media (min-width: 640px) {
+        .sr-section { padding-block: 5rem; }
+      }
+      .sr-card {
+        border-radius: 1rem;
+        border: 1px solid #1e293b;
+        background-color: #111827;
+        overflow: hidden;
+      }
+      .sr-card-pad {
+        padding: 1.5rem;
+      }
+      .sr-tabs {
+        display: inline-flex;
+        gap: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 0.75rem;
+        border: 1px solid #1e293b;
+        background-color: #111827;
+        margin-bottom: 1.5rem;
+      }
+      .sr-tab {
+        min-height: 40px;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        background: transparent;
+        color: #cbd5e1;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+      .sr-tab.is-active {
+        background-color: #0ea5e9;
+        color: #020617;
+      }
+      .sr-cap-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      @media (min-width: 768px) {
+        .sr-cap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      .sr-ios-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      @media (min-width: 768px) {
+        .sr-ios-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      }
+      .sr-step-box {
+        border-radius: 0.75rem;
+        border: 1px solid #1e293b;
+        background-color: #090e17;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .sr-img-frame {
+        border-radius: 0.5rem;
+        border: 1px solid #1e293b;
+        background-color: #060a12;
+        padding: 0.5rem;
+      }
+      .sr-img-frame img {
+        display: block;
+        width: 100%;
+        height: 12rem;
+        object-fit: contain;
+        border-radius: 0.25rem;
+      }
+      .sr-footer {
+        border-top: 1px solid rgba(30, 41, 59, 0.8);
+        background-color: #070b12;
+        padding-block: 2.5rem;
+      }
+      .sr-modal-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: none;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.78);
+        backdrop-filter: blur(6px);
+        padding: 0;
+      }
+      .sr-modal-backdrop.is-open {
+        display: flex;
+      }
+      @media (min-width: 640px) {
+        .sr-modal-backdrop {
+          align-items: center;
+          padding: 1rem;
+        }
+      }
+      .sr-modal-dialog {
+        width: 100%;
+        max-width: 36rem;
+        border-radius: 1.5rem 1.5rem 0 0;
+        border: 1px solid rgba(51, 65, 85, 0.85);
+        background-color: #111827;
+        color: #f1f5f9;
+        overflow: hidden;
+      }
+      @media (min-width: 640px) {
+        .sr-modal-dialog { border-radius: 1rem; }
+      }
+      .sr-modal-body {
+        padding: 1.25rem 1.5rem;
+        max-height: 68vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .sr-modal-footer {
+        padding: 1rem 1.5rem;
+        background-color: #0d1422;
+        border-top: 1px solid #1e293b;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .sr-hidden { display: none !important; }
+    </style>
+    <!-- STANDALONE_STYLE_END -->
   </head>
   <body class="bg-[#090E17] text-slate-100 antialiased selection:bg-sky-500/30 selection:text-sky-100">
-    <div id="root"></div>
+    <div id="root">
+      <!-- STANDALONE_HTML_START -->
+      <div class="sr-shell">
+        <header class="sr-header">
+          <div class="sr-container sr-header-inner">
+            <a href="#top" class="sr-brand">أكاديمية ONERAY التعليمية</a>
+            <nav class="sr-nav" aria-label="التنقل الرئيسي">
+              <a href="#downloads">التحميل</a>
+              <a href="#overview">عن المحاكي</a>
+              <a href="#capabilities">المهارات</a>
+              <a href="#ios-guide">دليل الآيفون</a>
+            </nav>
+            <a href="#downloads" class="sr-header-cta">حمل اللعبة الآن</a>
+          </div>
+        </header>
+
+        <main id="top" style="flex:1;">
+          <section id="downloads" class="sr-hero">
+            <div class="sr-container">
+              <div class="sr-grid-2">
+                <div class="sr-col-6" style="display:flex;flex-direction:column;justify-content:center;">
+                  <p class="sr-kicker">أكاديمية ONERAY التعليمية · التدريب السريري الرقمي</p>
+                  <h1 class="sr-h1">محاكي تقني الأشعة</h1>
+                  <p class="sr-en-sub">X-Ray Clinic Simulator</p>
+                  <p class="sr-lead">
+                    تجربة تعليمية وتدريبية متكاملة لمحاكاة التصوير الشعاعي الطبي، وضبط عوامل التعريض الإشعاعي، وتطبيق وضعيات المريض داخل قسم الأشعة الرقمية.
+                  </p>
+
+                  <div class="sr-downloads" aria-label="خيارات تحميل اللعبة">
+                    <a
+                      href="https://www.dropbox.com/scl/fi/wftxrumfbn37rpsao1wwt/X-RAY-CLINIC-SIMULATOR.apk?rlkey=pw4t3ag3g7hyyoy3crdozeipi&st=f9q66wzw&dl=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="sr-btn-primary"
+                    >
+                      <span class="sr-btn-left">
+                        <span class="sr-icon-box-primary" aria-hidden="true">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a1.003 1.003 0 1 1 0-2.006 1.003 1.003 0 0 1 0 2.006m-11.046 0a1.003 1.003 0 1 1 0-2.006 1.003 1.003 0 0 1 0 2.006m11.404-6.02 1.997-3.459a.416.416 0 0 0-.152-.567.416.416 0 0 0-.568.152L17.136 8.95a11.34 11.34 0 0 0-5.136-1.22c-1.855 0-3.606.443-5.136 1.22L4.842 5.447a.416.416 0 0 0-.568-.152.416.416 0 0 0-.152.567l1.997 3.459C2.688 11.186.343 14.658 0 18.761h24c-.344-4.103-2.689-7.575-6.119-9.44"/></svg>
+                        </span>
+                        <span>
+                          <span class="sr-btn-title">التحميل للأندرويد</span>
+                          <span class="sr-btn-sub">تنزيل مباشر بصيغة APK · الهواتف والأجهزة اللوحية</span>
+                        </span>
+                      </span>
+                      <span aria-hidden="true">↓</span>
+                    </a>
+
+                    <button type="button" data-open-ios-modal="true" class="sr-btn-secondary">
+                      <span class="sr-btn-left">
+                        <span class="sr-icon-box-secondary" style="color:#ffffff;" aria-hidden="true">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43m4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></svg>
+                        </span>
+                        <span>
+                          <span class="sr-btn-title">التحميل للآيفون</span>
+                          <span class="sr-btn-sub">تثبيت عبر متصفح سفاري · تظهر التعليمات قبل فتح الرابط</span>
+                        </span>
+                      </span>
+                      <span aria-hidden="true" style="color:#38bdf8;">ⓘ</span>
+                    </button>
+
+                    <a
+                      href="https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="sr-btn-secondary"
+                    >
+                      <span class="sr-btn-left">
+                        <span class="sr-icon-box-secondary" aria-hidden="true">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449 9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                        </span>
+                        <span>
+                          <span class="sr-btn-title">التحميل للويندوز</span>
+                          <span class="sr-btn-sub">نسخة الحاسوب والويب المباشرة · تشغيل فوري على Windows</span>
+                        </span>
+                      </span>
+                      <span aria-hidden="true" style="color:#94a3b8;">↗</span>
+                    </a>
+                  </div>
+
+                  <div class="sr-meta-line">
+                    <span>متوافق مع الهواتف والحواسيب</span>
+                    <span aria-hidden="true">·</span>
+                    <span>أكاديمية ONERAY التعليمية</span>
+                    <span aria-hidden="true">·</span>
+                    <span>تصميم التدريسي مجتبى كريم</span>
+                  </div>
+                </div>
+
+                <div class="sr-col-6">
+                  <div class="sr-hero-card">
+                    <img
+                      src="./src/assets/images/hero_xray_simulator_1795642841928.jpg"
+                      alt="غرفة التصوير الشعاعي الرقمي في محاكي تقني الأشعة"
+                      referrerpolicy="no-referrer"
+                    />
+                    <div class="sr-hero-scrim" aria-hidden="true"></div>
+                    <div class="sr-hero-caption">
+                      <p style="margin:0 0 0.25rem;font-size:0.75rem;font-weight:500;color:#7dd3fc;">بيئة المحاكاة السريرية</p>
+                      <p style="margin:0;font-size:0.95rem;font-weight:600;color:#ffffff;">محاكاة واقعية لجهاز الأشعة السينية ومنصة التحكم الرقمية</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="overview" class="sr-section">
+            <div class="sr-container">
+              <div class="sr-grid-2" style="align-items:center;">
+                <div class="sr-col-6">
+                  <div class="sr-card">
+                    <img
+                      src="./src/assets/images/simulator_clinical_console_1795642842154.jpg"
+                      alt="منصة التحكم وضبط عوامل التعريض في محاكي تقني الأشعة"
+                      style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;"
+                      referrerpolicy="no-referrer"
+                    />
+                    <div style="border-top:1px solid #1e293b;padding:1rem 1.25rem;display:flex;justify-content:space-between;gap:1rem;font-size:0.875rem;">
+                      <span style="font-weight:500;color:#e2e8f0;">لوحة التحكم وعرض الصورة الشعاعية</span>
+                      <span style="color:#94a3b8;font-size:0.75rem;">تدريب عملي تفاعلي</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sr-col-6">
+                  <p class="sr-kicker" style="margin-bottom:0.5rem;">دليل التشغيل حسب جهازك</p>
+                  <h2 style="margin:0 0 1rem;font-size:1.75rem;font-weight:700;color:#ffffff;">اختر منصتك وابدأ التدريب مباشرة</h2>
+                  <p style="margin:0 0 1.5rem;color:#cbd5e1;font-size:0.95rem;">
+                    صُمم محاكي تقني الأشعة ليعمل بسلاسة على الهواتف الذكية والأجهزة اللوحية وأجهزة الويندوز، لتتمكن من التدرب في أي وقت.
+                  </p>
+
+                  <div class="sr-tabs" role="tablist">
+                    <button type="button" class="sr-tab is-active" data-static-tab="android">الأندرويد</button>
+                    <button type="button" class="sr-tab" data-static-tab="ios">الآيفون</button>
+                    <button type="button" class="sr-tab" data-static-tab="windows">الويندوز</button>
+                  </div>
+
+                  <div class="sr-card sr-card-pad">
+                    <div data-static-panel="android">
+                      <h3 style="margin:0 0 0.75rem;font-size:1.125rem;font-weight:700;color:#ffffff;">التثبيت على أجهزة الأندرويد (Android)</h3>
+                      <p style="margin:0 0 1.25rem;font-size:0.875rem;color:#cbd5e1;">قم بتنزيل ملف التطبيق المباشر بصيغة APK، ثم افتح الملف على هاتفك واسمح بالتثبيت لتبدأ باستخدام المحاكي مباشرة.</p>
+                      <a href="https://www.dropbox.com/scl/fi/wftxrumfbn37rpsao1wwt/X-RAY-CLINIC-SIMULATOR.apk?rlkey=pw4t3ag3g7hyyoy3crdozeipi&st=f9q66wzw&dl=1" target="_blank" rel="noopener noreferrer" class="sr-header-cta" style="min-height:44px;padding-inline:1.25rem;border-radius:0.75rem;">التحميل للأندرويد</a>
+                    </div>
+                    <div data-static-panel="ios" class="sr-hidden">
+                      <h3 style="margin:0 0 0.75rem;font-size:1.125rem;font-weight:700;color:#ffffff;">التشغيل والتثبيت على الآيفون (iPhone)</h3>
+                      <p style="margin:0 0 1.25rem;font-size:0.875rem;color:#cbd5e1;">يعمل المحاكي على أجهزة الآيفون عبر متصفح سفاري، ويمكنك إضافته إلى الشاشة الرئيسية ليعمل كتطبيق مستقل.</p>
+                      <button type="button" data-open-ios-modal="true" class="sr-header-cta" style="min-height:44px;padding-inline:1.25rem;border-radius:0.75rem;border:none;">عرض التعليمات وفتح رابط الآيفون</button>
+                    </div>
+                    <div data-static-panel="windows" class="sr-hidden">
+                      <h3 style="margin:0 0 0.75rem;font-size:1.125rem;font-weight:700;color:#ffffff;">التشغيل على أجهزة الويندوز (Windows)</h3>
+                      <p style="margin:0 0 1.25rem;font-size:0.875rem;color:#cbd5e1;">افتح رابط المحاكي مباشرة من متصفحك على نظام ويندوز لتجربة التحكم الكامل بالفأرة ولوحة المفاتيح.</p>
+                      <a href="https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/" target="_blank" rel="noopener noreferrer" class="sr-header-cta" style="min-height:44px;padding-inline:1.25rem;border-radius:0.75rem;">التحميل للويندوز</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="capabilities" class="sr-section">
+            <div class="sr-container">
+              <div style="max-width:42rem;margin-bottom:2.5rem;">
+                <p class="sr-kicker" style="margin-bottom:0.5rem;">ماذا يقدم المحاكي</p>
+                <h2 style="margin:0 0 0.75rem;font-size:1.75rem;font-weight:700;color:#ffffff;">محاور التدريب داخل محاكي تقني الأشعة</h2>
+                <p style="margin:0;color:#cbd5e1;font-size:0.95rem;">بُني المحاكي ليربط بين الجانب النظري والتطبيق العملي لطلبة تقنيات الأشعة والتصوير الطبي.</p>
+              </div>
+              <div class="sr-cap-grid">
+                <div class="sr-card sr-card-pad">
+                  <h3 style="margin:0 0 0.5rem;font-size:1.125rem;font-weight:700;color:#ffffff;"><span style="color:#38bdf8;">01.</span> ضبط عوامل التعريض الشعاعي</h3>
+                  <p style="margin:0;font-size:0.875rem;color:#cbd5e1;">التحكم الدقيق بقيم الفولتية (kVp) والتيار والزمن (mAs) بما يتناسب مع كل فحص شعاعي وحجم المريض.</p>
+                </div>
+                <div class="sr-card sr-card-pad">
+                  <h3 style="margin:0 0 0.5rem;font-size:1.125rem;font-weight:700;color:#ffffff;"><span style="color:#38bdf8;">02.</span> وضعيات التصوير السريرية</h3>
+                  <p style="margin:0;font-size:0.875rem;color:#cbd5e1;">تطبيق الوضعيات التشريحية الصحيحة وتوجيه أنبوبة الأشعة وتحديد مسافة المصدر عن المستقبل (SID).</p>
+                </div>
+                <div class="sr-card sr-card-pad">
+                  <h3 style="margin:0 0 0.5rem;font-size:1.125rem;font-weight:700;color:#ffffff;"><span style="color:#38bdf8;">03.</span> معاينة الصورة الإشعاعية</h3>
+                  <p style="margin:0;font-size:0.875rem;color:#cbd5e1;">رؤية النتيجة الشعاعية مباشرة بعد التعريض وتحليل جودة التباين والكثافة وتحديد الأخطاء التقنية.</p>
+                </div>
+                <div class="sr-card sr-card-pad">
+                  <h3 style="margin:0 0 0.5rem;font-size:1.125rem;font-weight:700;color:#ffffff;"><span style="color:#38bdf8;">04.</span> بيئة غرفة الأشعة التفاعلية</h3>
+                  <p style="margin:0;font-size:0.875rem;color:#cbd5e1;">محاكاة عملية شاملة تحاكي أجهزة التصوير الرقمي (DR) في الأقسام السريرية لتدريب الطلبة والممارسين.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="ios-guide" style="padding-block:3.5rem;">
+            <div class="sr-container">
+              <div class="sr-card sr-card-pad">
+                <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;padding-bottom:1.5rem;margin-bottom:2rem;border-bottom:1px solid #1e293b;">
+                  <div>
+                    <p class="sr-kicker" style="margin-bottom:0.5rem;">تعليمات خاصة بمستخدمي الآيفون</p>
+                    <h2 style="margin:0;font-size:1.65rem;font-weight:700;color:#ffffff;">خطوات تثبيت اللعبة على متصفح سفاري</h2>
+                  </div>
+                  <button type="button" data-open-ios-modal="true" class="sr-header-cta" style="min-height:48px;padding-inline:1.5rem;border-radius:0.75rem;border:none;">التحميل للآيفون</button>
+                </div>
+
+                <div class="sr-ios-grid">
+                  <div class="sr-step-box">
+                    <div>
+                      <div style="color:#38bdf8;font-weight:700;margin-bottom:0.75rem;">01.</div>
+                      <p style="margin:0 0 0.75rem;font-weight:600;color:#f1f5f9;">بعد فتح الرابط اضغط على ثلاث نقاط في أسفل متصفح سفاري.</p>
+                      <div class="sr-img-frame">
+                        <img
+                          src="./public/assets/aistudio/image_fabb7c11.png"
+                          data-fallback="./assets/aistudio/image_fabb7c11.png"
+                          onerror="if(this.dataset.fallback&&this.src.indexOf('public/')!==-1){this.src=this.dataset.fallback;}"
+                          alt="توضيح الضغط على الثلاث نقاط في أسفل متصفح سفاري"
+                        />
+                      </div>
+                    </div>
+                    <p style="margin:0;font-size:0.75rem;color:#94a3b8;">في شريط أدوات متصفح Safari السفلي</p>
+                  </div>
+
+                  <div class="sr-step-box">
+                    <div>
+                      <div style="color:#38bdf8;font-weight:700;margin-bottom:0.75rem;">02.</div>
+                      <p style="margin:0 0 0.75rem;font-weight:600;color:#f1f5f9;">اضغط على share أو مشاركة.</p>
+                      <div class="sr-img-frame">
+                        <img
+                          src="./public/assets/aistudio/image_190e9094.png"
+                          data-fallback="./assets/aistudio/image_190e9094.png"
+                          onerror="if(this.dataset.fallback&&this.src.indexOf('public/')!==-1){this.src=this.dataset.fallback;}"
+                          alt="توضيح الضغط على خيار Share أو مشاركة في القائمة"
+                        />
+                      </div>
+                    </div>
+                    <p style="margin:0;font-size:0.75rem;color:#94a3b8;">أيقونة المربع مع السهم المتجه للأعلى</p>
+                  </div>
+
+                  <div class="sr-step-box">
+                    <div>
+                      <div style="color:#38bdf8;font-weight:700;margin-bottom:0.75rem;">03.</div>
+                      <p style="margin:0 0 0.75rem;font-weight:600;color:#f1f5f9;">ابحث عن خيار الإضافة إلى الواجهة الرئيسية أو Add to Home Screen.</p>
+                      <div class="sr-img-frame">
+                        <img
+                          src="./public/assets/aistudio/image_0c86d632.png"
+                          data-fallback="./assets/aistudio/image_0c86d632.png"
+                          onerror="if(this.dataset.fallback&&this.src.indexOf('public/')!==-1){this.src=this.dataset.fallback;}"
+                          alt="توضيح اختيار زر Add to Home Screen لإضافة التطبيق للشاشة الرئيسية"
+                        />
+                      </div>
+                    </div>
+                    <p style="margin:0;font-size:0.75rem;color:#94a3b8;">لتشغيل المحاكي كتطبيق مستقل على الشاشة الرئيسية</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="sr-footer">
+          <div class="sr-container">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;padding-bottom:2rem;border-bottom:1px solid rgba(30,41,59,0.7);">
+              <div style="display:flex;align-items:center;gap:1rem;">
+                <img
+                  src="./src/assets/images/oneray_academy_mark_1795642842061.jpg"
+                  alt="شعار أكاديمية ONERAY التعليمية"
+                  style="width:3rem;height:3rem;border-radius:0.75rem;border:1px solid #1e293b;object-fit:cover;"
+                />
+                <div>
+                  <p style="margin:0;font-size:1rem;font-weight:700;color:#ffffff;">أكاديمية ONERAY التعليمية</p>
+                  <p style="margin:0.2rem 0 0;font-size:0.8125rem;color:#94a3b8;">محاكي تقني الأشعة · X-Ray Clinic Simulator</p>
+                </div>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1rem;font-size:0.875rem;color:#cbd5e1;">
+                <a href="https://www.dropbox.com/scl/fi/wftxrumfbn37rpsao1wwt/X-RAY-CLINIC-SIMULATOR.apk?rlkey=pw4t3ag3g7hyyoy3crdozeipi&st=f9q66wzw&dl=1" target="_blank" rel="noopener noreferrer">التحميل للأندرويد</a>
+                <span aria-hidden="true">·</span>
+                <button type="button" data-open-ios-modal="true" style="background:none;border:none;color:inherit;padding:0;font-size:inherit;">التحميل للآيفون</button>
+                <span aria-hidden="true">·</span>
+                <a href="https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/" target="_blank" rel="noopener noreferrer">التحميل للويندوز</a>
+              </div>
+            </div>
+            <div style="padding-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0.75rem;">
+              <p style="margin:0;font-size:0.95rem;font-weight:600;color:#f1f5f9;">تم تصميم اللعبة من قبل التدريسي مجتبى كريم</p>
+              <p style="margin:0;font-size:0.75rem;color:#94a3b8;">أكاديمية ONERAY التعليمية · جميع الحقوق محفوظة</p>
+            </div>
+          </div>
+        </footer>
+
+        <div id="static-ios-modal" class="sr-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="static-ios-title">
+          <div class="sr-modal-dialog">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 1.5rem;border-bottom:1px solid #1e293b;">
+              <div>
+                <h2 id="static-ios-title" style="margin:0;font-size:1.125rem;font-weight:700;color:#ffffff;">تعليمات التثبيت للآيفون (iPhone)</h2>
+                <p style="margin:0.2rem 0 0;font-size:0.75rem;color:#94a3b8;">اتبع هذه الخطوات في متصفح سفاري قبل المتابعة</p>
+              </div>
+              <button type="button" data-close-ios-modal="true" aria-label="إغلاق" style="width:44px;height:44px;border-radius:0.75rem;border:1px solid #334155;background:transparent;color:#cbd5e1;font-size:1.125rem;">✕</button>
+            </div>
+
+            <div class="sr-modal-body">
+              <div class="sr-step-box">
+                <p style="margin:0;font-weight:600;color:#f1f5f9;"><span style="color:#38bdf8;">01.</span> بعد فتح الرابط اضغط على ثلاث نقاط في أسفل متصفح سفاري.</p>
+                <div class="sr-img-frame">
+                  <img
+                    src="./public/assets/aistudio/image_fabb7c11.png"
+                    data-fallback="./assets/aistudio/image_fabb7c11.png"
+                    onerror="if(this.dataset.fallback&&this.src.indexOf('public/')!==-1){this.src=this.dataset.fallback;}"
+                    alt="توضيح الضغط على الثلاث نقاط في أسفل متصفح سفاري"
+                  />
+                </div>
+              </div>
+              <div class="sr-step-box">
+                <p style="margin:0;font-weight:600;color:#f1f5f9;"><span style="color:#38bdf8;">02.</span> اضغط على share أو مشاركة.</p>
+                <div class="sr-img-frame">
+                  <img
+                    src="./public/assets/aistudio/image_190e9094.png"
+                    data-fallback="./assets/aistudio/image_190e9094.png"
+                    onerror="if(this.dataset.fallback&&this.src.indexOf('public/')!==-1){this.src=this.dataset.fallback;}"
+                    alt="توضيح الضغط على خيار Share أو مشاركة"
+                  />
+                </div>
+              </div>
+              <div class="sr-step-box">
+                <p style="margin:0;font-weight:600;color:#f1f5f9;"><span style="color:#38bdf8;">03.</span> ابحث عن خيار الإضافة إلى الواجهة الرئيسية أو Add to Home Screen.</p>
+                <div class="sr-img-frame">
+                  <img
+                    src="./public/assets/aistudio/image_0c86d632.png"
+                    data-fallback="./assets/aistudio/image_0c86d632.png"
+                    onerror="if(this.dataset.fallback&&this.src.indexOf('public/')!==-1){this.src=this.dataset.fallback;}"
+                    alt="توضيح اختيار Add to Home Screen"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="sr-modal-footer">
+              <a
+                href="https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-close-ios-modal="true"
+                class="sr-header-cta"
+                style="flex:1;min-height:48px;border-radius:0.75rem;font-size:0.875rem;"
+              >
+                متابعة وفتح رابط التحميل للآيفون
+              </a>
+              <button
+                type="button"
+                data-close-ios-modal="true"
+                style="min-height:44px;padding:0.5rem 1.25rem;border-radius:0.75rem;border:1px solid #334155;background:transparent;color:#cbd5e1;font-size:0.875rem;font-weight:500;"
+              >
+                إغلاق
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- STANDALONE_HTML_END -->
+    </div>
+    <!-- STANDALONE_SCRIPT_START -->
+    <script>
+      (function () {
+        if (window.__REACT_MOUNTED__) return;
+        var modal = document.getElementById('static-ios-modal');
+        if (modal) {
+          document.querySelectorAll('[data-open-ios-modal]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              if (window.__REACT_MOUNTED__) return;
+              modal.classList.add('is-open');
+              document.body.style.overflow = 'hidden';
+            });
+          });
+          document.querySelectorAll('[data-close-ios-modal]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              modal.classList.remove('is-open');
+              document.body.style.overflow = '';
+            });
+          });
+          modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+              modal.classList.remove('is-open');
+              document.body.style.overflow = '';
+            }
+          });
+          document.addEventListener('keydown', function (e) {
+            if (!window.__REACT_MOUNTED__ && e.key === 'Escape' && modal.classList.contains('is-open')) {
+              modal.classList.remove('is-open');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+        var tabs = document.querySelectorAll('[data-static-tab]');
+        var panels = document.querySelectorAll('[data-static-panel]');
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            if (window.__REACT_MOUNTED__) return;
+            var target = tab.getAttribute('data-static-tab');
+            tabs.forEach(function (t) {
+              t.classList.toggle('is-active', t.getAttribute('data-static-tab') === target);
+            });
+            panels.forEach(function (p) {
+              p.classList.toggle('sr-hidden', p.getAttribute('data-static-panel') !== target);
+            });
+          });
+        });
+      })();
+    </script>
+    <!-- STANDALONE_SCRIPT_END -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

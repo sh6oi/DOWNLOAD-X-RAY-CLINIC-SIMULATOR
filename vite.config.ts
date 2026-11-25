@@ -10,6 +10,16 @@ export default defineConfig(() => {
     plugins: [
       react(),
       tailwindcss(),
+      {
+        name: 'strip-standalone-fallback',
+        apply: 'build',
+        transformIndexHtml(html: string): string {
+          return html
+            .replace(/<!-- STANDALONE_STYLE_START -->[\s\S]*?<!-- STANDALONE_STYLE_END -->/g, '')
+            .replace(/<!-- STANDALONE_HTML_START -->[\s\S]*?<!-- STANDALONE_HTML_END -->/g, '')
+            .replace(/<!-- STANDALONE_SCRIPT_START -->[\s\S]*?<!-- STANDALONE_SCRIPT_END -->/g, '');
+        },
+      },
       // Copies src/assets into dist/ so root-relative URLs like
       // "/src/assets/images/..." (e.g. generate_image output) still resolve
       // in production builds. Do not remove.
