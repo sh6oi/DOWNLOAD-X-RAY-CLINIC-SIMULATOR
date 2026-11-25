@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>محاكي تقني الأشعة — أكاديمية ONERAY التعليمية</title>
-    <meta http-equiv="refresh" content="0; url=./index.html" />
     <script>
       (function () {
         var path = window.location.pathname;
+        if (path.indexOf('index.html') !== -1) return;
+        try {
+          if (sessionStorage.getItem('gh_pages_redirected')) return;
+          sessionStorage.setItem('gh_pages_redirected', '1');
+        } catch (e) {}
         var base = path.endsWith('/') ? path : path.replace(/[^/]*$/, '');
         window.location.replace(base + 'index.html' + window.location.search + window.location.hash);
       })();
     </script>
   </head>
-  <body style="background:#090E17;color:#f1f5f9;font-family:system-ui,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;">
-    <a href="./index.html" style="color:#38bdf8;text-decoration:none;">الانتقال إلى الصفحة الرئيسية</a>
+  <body style="background:#090E17;color:#f1f5f9;font-family:system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:100vh;margin:0;text-align:center;padding:24px;">
+    <h1 style="margin:0;font-size:1.5rem;">محاكي تقني الأشعة — أكاديمية ONERAY التعليمية</h1>
+    <a href="./index.html" style="display:inline-block;padding:12px 24px;border-radius:10px;background:#0ea5e9;color:#020617;font-weight:700;text-decoration:none;">الانتقال إلى الصفحة الرئيسية</a>
   </body>
 </html>
