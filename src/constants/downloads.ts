@@ -1,6 +1,6 @@
 export const DOWNLOAD_LINKS = {
   android:
-    'https://www.dropbox.com/scl/fi/wftxrumfbn37rpsao1wwt/X-RAY-CLINIC-SIMULATOR.apk?rlkey=pw4t3ag3g7hyyoy3crdozeipi&st=03otlgha&e=1&dl=0',
+    'https://download1654.mediafire.com/w6tdlotaru0glHfxILdnUn6yO1EkaUJP9tr0276eJAetE3TIUwf6Jh-0HntfSBeiHOuWYCrGRGWlPhUFbd55018xVMZT52cJG04Tum_auigLNhG965tP3jB9U0gErgcRIp59iHsuvKStEjTxClzxXdWSbr7vxPNWVenVWfxPYXu_MjcN/6cdkmo0qetjzg5s/X-RAY-CLINIC-SIMULATOR+%281%29.apk',
   ios: 'https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/',
   windows: 'https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/',
 } as const;
