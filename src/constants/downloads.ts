@@ -1,6 +1,6 @@
 export const DOWNLOAD_LINKS = {
   android:
-    'https://www.dropbox.com/scl/fi/wftxrumfbn37rpsao1wwt/X-RAY-CLINIC-SIMULATOR.apk?rlkey=pw4t3ag3g7hyyoy3crdozeipi&st=f9q66wzw&dl=1',
+    'https://www.dropbox.com/scl/fi/wftxrumfbn37rpsao1wwt/X-RAY-CLINIC-SIMULATOR.apk?rlkey=pw4t3ag3g7hyyoy3crdozeipi&st=03otlgha&e=1&dl=0',
   ios: 'https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/',
   windows: 'https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/',
 } as const;
