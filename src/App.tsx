@@ -8,6 +8,7 @@ import {
   Monitor,
   Smartphone,
 } from 'lucide-react';
+import { AndroidDownloadModal } from './components/AndroidDownloadModal';
 import { IosInstructionsModal } from './components/IosInstructionsModal';
 import { AndroidIcon, AppleIcon, WindowsIcon } from './components/PlatformIcons';
 import { ResilientImage } from './components/ResilientImage';
@@ -23,6 +24,7 @@ import {
 type PlatformTab = 'android' | 'ios' | 'windows';
 
 export default function App() {
+  const [isAndroidModalOpen, setIsAndroidModalOpen] = useState(false);
   const [isIosModalOpen, setIsIosModalOpen] = useState(false);
   const [activePlatformTab, setActivePlatformTab] = useState<PlatformTab>('android');
 
@@ -117,12 +119,11 @@ export default function App() {
 
                 {/* Three Required Download Buttons */}
                 <div className="space-y-3" aria-label="خيارات تحميل اللعبة">
-                  {/* 1. Download for Android */}
-                  <a
-                    href={DOWNLOAD_LINKS.android}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex min-h-[64px] w-full items-center justify-between gap-4 rounded-xl bg-sky-500 hover:bg-sky-400 active:scale-[0.99] px-5 py-3.5 text-slate-950 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+                  {/* 1. Download for Android (Opens External Browser Modal) */}
+                  <button
+                    type="button"
+                    onClick={() => setIsAndroidModalOpen(true)}
+                    className="group flex min-h-[64px] w-full items-center justify-between gap-4 rounded-xl bg-sky-500 hover:bg-sky-400 active:scale-[0.99] px-5 py-3.5 text-right text-slate-950 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
                   >
                     <div className="flex items-center gap-3.5 min-w-0">
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-slate-950/15 text-slate-950">
@@ -133,12 +134,12 @@ export default function App() {
                           التحميل للأندرويد
                         </span>
                         <span className="block text-xs font-medium text-slate-900/80 mt-0.5 truncate">
-                          تنزيل مباشر بصيغة APK · الهواتف والأجهزة اللوحية
+                          فتح رابط التحميل في متصفح خارجي · ملف APK
                         </span>
                       </div>
                     </div>
                     <Download className="h-5 w-5 shrink-0 transition-transform duration-150 group-hover:translate-y-0.5" />
-                  </a>
+                  </button>
 
                   {/* 2. Download for iPhone (Opens Instructions Modal First) */}
                   <button
@@ -319,15 +320,14 @@ export default function App() {
                         قم بتنزيل ملف التطبيق المباشر بصيغة APK، ثم افتح الملف على هاتفك واسمح
                         بالتثبيت لتبدأ باستخدام المحاكي مباشرة دون الحاجة لمتصفح.
                       </p>
-                      <a
-                        href={DOWNLOAD_LINKS.android}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        type="button"
+                        onClick={() => setIsAndroidModalOpen(true)}
                         className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 px-5 py-2.5 text-sm font-bold text-slate-950 transition-colors whitespace-nowrap"
                       >
                         <Download className="h-4 w-4 shrink-0" />
                         <span>التحميل للأندرويد</span>
-                      </a>
+                      </button>
                     </div>
                   )}
 
@@ -496,14 +496,13 @@ export default function App() {
             </div>
 
             <div className="flex flex-wrap items-center gap-4 text-sm text-slate-300">
-              <a
-                href={DOWNLOAD_LINKS.android}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setIsAndroidModalOpen(true)}
                 className="hover:text-sky-400 transition-colors whitespace-nowrap"
               >
                 التحميل للأندرويد
-              </a>
+              </button>
               <span className="text-slate-700" aria-hidden="true">
                 ·
               </span>
@@ -538,6 +537,12 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Android External Browser Modal */}
+      <AndroidDownloadModal
+        isOpen={isAndroidModalOpen}
+        onClose={() => setIsAndroidModalOpen(false)}
+      />
 
       {/* Pre-link iPhone Instructions Modal */}
       <IosInstructionsModal

@@ -5,6 +5,17 @@ export const DOWNLOAD_LINKS = {
   windows: 'https://sh6oi.github.io/X-RAY-CLINIC-SIMULATOR/',
 } as const;
 
+export function getAndroidExternalBrowserUrl(): string {
+  const isAndroid =
+    typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent);
+  if (!isAndroid) {
+    return DOWNLOAD_LINKS.android;
+  }
+  const hostAndPath = DOWNLOAD_LINKS.android.replace(/^https?:\/\//, '');
+  const fallback = encodeURIComponent(DOWNLOAD_LINKS.android);
+  return `intent://${hostAndPath}#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=${fallback};end`;
+}
+
 export const HERO_IMAGE_PATH = './src/assets/images/hero_xray_simulator_1795642841928.jpg';
 export const CONSOLE_IMAGE_PATH = './src/assets/images/simulator_clinical_console_1795642842154.jpg';
 export const ACADEMY_MARK_PATH = './src/assets/images/oneray_academy_mark_1795642842061.jpg';

@@ -461,10 +461,9 @@
                   </p>
 
                   <div class="sr-downloads" aria-label="خيارات تحميل اللعبة">
-                    <a
-                      href="https://download1654.mediafire.com/w6tdlotaru0glHfxILdnUn6yO1EkaUJP9tr0276eJAetE3TIUwf6Jh-0HntfSBeiHOuWYCrGRGWlPhUFbd55018xVMZT52cJG04Tum_auigLNhG965tP3jB9U0gErgcRIp59iHsuvKStEjTxClzxXdWSbr7vxPNWVenVWfxPYXu_MjcN/6cdkmo0qetjzg5s/X-RAY-CLINIC-SIMULATOR+%281%29.apk"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      type="button"
+                      data-open-android-modal="true"
                       class="sr-btn-primary"
                     >
                       <span class="sr-btn-left">
@@ -473,11 +472,11 @@
                         </span>
                         <span>
                           <span class="sr-btn-title">التحميل للأندرويد</span>
-                          <span class="sr-btn-sub">تنزيل مباشر بصيغة APK · الهواتف والأجهزة اللوحية</span>
+                          <span class="sr-btn-sub">فتح رابط التحميل في متصفح خارجي · ملف APK</span>
                         </span>
                       </span>
                       <span aria-hidden="true">↓</span>
-                    </a>
+                    </button>
 
                     <button type="button" data-open-ios-modal="true" class="sr-btn-secondary">
                       <span class="sr-btn-left">
@@ -573,7 +572,7 @@
                     <div data-static-panel="android">
                       <h3 style="margin:0 0 0.75rem;font-size:1.125rem;font-weight:700;color:#ffffff;">التثبيت على أجهزة الأندرويد (Android)</h3>
                       <p style="margin:0 0 1.25rem;font-size:0.875rem;color:#cbd5e1;">قم بتنزيل ملف التطبيق المباشر بصيغة APK، ثم افتح الملف على هاتفك واسمح بالتثبيت لتبدأ باستخدام المحاكي مباشرة.</p>
-                      <a href="https://download1654.mediafire.com/w6tdlotaru0glHfxILdnUn6yO1EkaUJP9tr0276eJAetE3TIUwf6Jh-0HntfSBeiHOuWYCrGRGWlPhUFbd55018xVMZT52cJG04Tum_auigLNhG965tP3jB9U0gErgcRIp59iHsuvKStEjTxClzxXdWSbr7vxPNWVenVWfxPYXu_MjcN/6cdkmo0qetjzg5s/X-RAY-CLINIC-SIMULATOR+%281%29.apk" target="_blank" rel="noopener noreferrer" class="sr-header-cta" style="min-height:44px;padding-inline:1.25rem;border-radius:0.75rem;">التحميل للأندرويد</a>
+                      <button type="button" data-open-android-modal="true" class="sr-header-cta" style="min-height:44px;padding-inline:1.25rem;border-radius:0.75rem;border:none;">التحميل للأندرويد</button>
                     </div>
                     <div data-static-panel="ios" class="sr-hidden">
                       <h3 style="margin:0 0 0.75rem;font-size:1.125rem;font-weight:700;color:#ffffff;">التشغيل والتثبيت على الآيفون (iPhone)</h3>
@@ -699,7 +698,7 @@
                 </div>
               </div>
               <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1rem;font-size:0.875rem;color:#cbd5e1;">
-                <a href="https://download1654.mediafire.com/w6tdlotaru0glHfxILdnUn6yO1EkaUJP9tr0276eJAetE3TIUwf6Jh-0HntfSBeiHOuWYCrGRGWlPhUFbd55018xVMZT52cJG04Tum_auigLNhG965tP3jB9U0gErgcRIp59iHsuvKStEjTxClzxXdWSbr7vxPNWVenVWfxPYXu_MjcN/6cdkmo0qetjzg5s/X-RAY-CLINIC-SIMULATOR+%281%29.apk" target="_blank" rel="noopener noreferrer">التحميل للأندرويد</a>
+                <button type="button" data-open-android-modal="true" style="background:none;border:none;color:inherit;padding:0;font-size:inherit;">التحميل للأندرويد</button>
                 <span aria-hidden="true">·</span>
                 <button type="button" data-open-ios-modal="true" style="background:none;border:none;color:inherit;padding:0;font-size:inherit;">التحميل للآيفون</button>
                 <span aria-hidden="true">·</span>
@@ -712,6 +711,67 @@
             </div>
           </div>
         </footer>
+
+        <div id="static-android-modal" class="sr-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="static-android-title">
+          <div class="sr-modal-dialog">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 1.5rem;border-bottom:1px solid #1e293b;">
+              <div>
+                <h2 id="static-android-title" style="margin:0;font-size:1.125rem;font-weight:700;color:#ffffff;">التحميل للأندرويد (Android)</h2>
+                <p style="margin:0.2rem 0 0;font-size:0.75rem;color:#94a3b8;">افتح رابط التحميل في متصفح خارجي لضمان اكتمال التنزيل</p>
+              </div>
+              <button type="button" data-close-android-modal="true" aria-label="إغلاق" style="width:44px;height:44px;border-radius:0.75rem;border:1px solid #334155;background:transparent;color:#cbd5e1;font-size:1.125rem;">✕</button>
+            </div>
+
+            <div class="sr-modal-body">
+              <p style="margin:0;font-size:0.875rem;color:#cbd5e1;line-height:1.7;">
+                إذا قمت بفتح الموقع من داخل تطبيق إنستغرام أو أي تطبيق آخر، اضغط على الزر أدناه لفتح الرابط في متصفح جوجل (Google Chrome) أو المتصفح الخارجي على جهازك:
+              </p>
+
+              <a
+                id="static-android-external-link"
+                href="https://download1654.mediafire.com/w6tdlotaru0glHfxILdnUn6yO1EkaUJP9tr0276eJAetE3TIUwf6Jh-0HntfSBeiHOuWYCrGRGWlPhUFbd55018xVMZT52cJG04Tum_auigLNhG965tP3jB9U0gErgcRIp59iHsuvKStEjTxClzxXdWSbr7vxPNWVenVWfxPYXu_MjcN/6cdkmo0qetjzg5s/X-RAY-CLINIC-SIMULATOR+%281%29.apk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="sr-header-cta"
+                style="min-height:52px;width:100%;border-radius:0.75rem;font-size:0.9375rem;"
+              >
+                افتح رابط التحميل في متصفح خارجي ↗
+              </a>
+
+              <div class="sr-step-box" style="gap:0.65rem;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;">
+                  <span style="font-size:0.75rem;font-weight:600;color:#cbd5e1;">رابط التحميل المباشر:</span>
+                  <button
+                    type="button"
+                    id="static-copy-android-link"
+                    style="min-height:32px;padding:0.25rem 0.75rem;border-radius:0.5rem;border:1px solid #334155;background:#1e293b;color:#e2e8f0;font-size:0.75rem;"
+                  >
+                    نسخ الرابط
+                  </button>
+                </div>
+                <a
+                  href="https://download1654.mediafire.com/w6tdlotaru0glHfxILdnUn6yO1EkaUJP9tr0276eJAetE3TIUwf6Jh-0HntfSBeiHOuWYCrGRGWlPhUFbd55018xVMZT52cJG04Tum_auigLNhG965tP3jB9U0gErgcRIp59iHsuvKStEjTxClzxXdWSbr7vxPNWVenVWfxPYXu_MjcN/6cdkmo0qetjzg5s/X-RAY-CLINIC-SIMULATOR+%281%29.apk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  dir="ltr"
+                  style="display:block;word-break:break-all;background:#060a12;border:1px solid #1e293b;border-radius:0.5rem;padding:0.625rem;font-size:0.75rem;color:#38bdf8;text-decoration:underline;text-align:left;"
+                >
+                  https://download1654.mediafire.com/w6tdlotaru0glHfxILdnUn6yO1EkaUJP9tr0276eJAetE3TIUwf6Jh-0HntfSBeiHOuWYCrGRGWlPhUFbd55018xVMZT52cJG04Tum_auigLNhG965tP3jB9U0gErgcRIp59iHsuvKStEjTxClzxXdWSbr7vxPNWVenVWfxPYXu_MjcN/6cdkmo0qetjzg5s/X-RAY-CLINIC-SIMULATOR+%281%29.apk
+                </a>
+              </div>
+            </div>
+
+            <div class="sr-modal-footer" style="justify-content:flex-end;">
+              <button
+                type="button"
+                data-close-android-modal="true"
+                style="min-height:44px;padding:0.5rem 1.25rem;border-radius:0.75rem;border:1px solid #334155;background:transparent;color:#cbd5e1;font-size:0.875rem;font-weight:500;"
+              >
+                إغلاق
+              </button>
+            </div>
+          </div>
+        </div>
 
         <div id="static-ios-modal" class="sr-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="static-ios-title">
           <div class="sr-modal-dialog">
@@ -787,6 +847,47 @@
     <script>
       (function () {
         if (window.__REACT_MOUNTED__) return;
+        var androidUrl = 'https://download1654.mediafire.com/w6tdlotaru0glHfxILdnUn6yO1EkaUJP9tr0276eJAetE3TIUwf6Jh-0HntfSBeiHOuWYCrGRGWlPhUFbd55018xVMZT52cJG04Tum_auigLNhG965tP3jB9U0gErgcRIp59iHsuvKStEjTxClzxXdWSbr7vxPNWVenVWfxPYXu_MjcN/6cdkmo0qetjzg5s/X-RAY-CLINIC-SIMULATOR+%281%29.apk';
+        var androidModal = document.getElementById('static-android-modal');
+        var androidLink = document.getElementById('static-android-external-link');
+        var copyAndroidBtn = document.getElementById('static-copy-android-link');
+        if (androidLink && /android/i.test(navigator.userAgent)) {
+          var hostPath = androidUrl.replace(/^https?:\/\//, '');
+          androidLink.setAttribute('href', 'intent://' + hostPath + '#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=' + encodeURIComponent(androidUrl) + ';end');
+          androidLink.removeAttribute('target');
+          androidLink.removeAttribute('rel');
+        }
+        if (copyAndroidBtn) {
+          copyAndroidBtn.addEventListener('click', function () {
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(androidUrl).then(function () {
+                copyAndroidBtn.textContent = 'تم النسخ';
+                setTimeout(function () { copyAndroidBtn.textContent = 'نسخ الرابط'; }, 2500);
+              });
+            }
+          });
+        }
+        if (androidModal) {
+          document.querySelectorAll('[data-open-android-modal]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              if (window.__REACT_MOUNTED__) return;
+              androidModal.classList.add('is-open');
+              document.body.style.overflow = 'hidden';
+            });
+          });
+          document.querySelectorAll('[data-close-android-modal]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              androidModal.classList.remove('is-open');
+              document.body.style.overflow = '';
+            });
+          });
+          androidModal.addEventListener('click', function (e) {
+            if (e.target === androidModal) {
+              androidModal.classList.remove('is-open');
+              document.body.style.overflow = '';
+            }
+          });
+        }
         var modal = document.getElementById('static-ios-modal');
         if (modal) {
           document.querySelectorAll('[data-open-ios-modal]').forEach(function (btn) {
@@ -808,13 +909,18 @@
               document.body.style.overflow = '';
             }
           });
-          document.addEventListener('keydown', function (e) {
-            if (!window.__REACT_MOUNTED__ && e.key === 'Escape' && modal.classList.contains('is-open')) {
-              modal.classList.remove('is-open');
-              document.body.style.overflow = '';
-            }
-          });
         }
+        document.addEventListener('keydown', function (e) {
+          if (window.__REACT_MOUNTED__ || e.key !== 'Escape') return;
+          if (modal && modal.classList.contains('is-open')) {
+            modal.classList.remove('is-open');
+            document.body.style.overflow = '';
+          }
+          if (androidModal && androidModal.classList.contains('is-open')) {
+            androidModal.classList.remove('is-open');
+            document.body.style.overflow = '';
+          }
+        });
         var tabs = document.querySelectorAll('[data-static-tab]');
         var panels = document.querySelectorAll('[data-static-panel]');
         tabs.forEach(function (tab) {
